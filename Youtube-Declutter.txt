@@ -113,6 +113,12 @@ youtube.com##ytd-watch-next-secondary-results-renderer > div[id='items'] > ytd-i
 ! ---------- PLAYER STYLING & UI ----------
 ! YouTube player controls with better contrast and blur
 youtube.com##.ytp-fullscreen-quick-actions, .ytp-button.ytp-play-button, .ytp-time-wrapper, .ytp-volume-area, .ytp-right-controls, .ytp-button.ytp-chapter-title, .ytp-button.ytp-fullscreen-grid-expand-button:style(backdrop-filter: blur(2px) !important; background: rgba(0, 0, 0, 0.5) !important; border-radius: 18px !important;)
+! Set default state to hidden with smooth transition
+youtube.com##.ytp-fullscreen-quick-actions :is(button[aria-label*="like" i], button[aria-label*="dislike" i], button[aria-label*="More" i])
+youtube.com##.ytp-fullscreen-quick-actions:style(opacity: 0 !important; transition: opacity 0.2s ease-in-out !important;)
+
+! Reveal on hover
+youtube.com##.ytp-fullscreen-quick-actions:hover:style(opacity: 1 !important;)
 
 ! Style popup panels with translucency
 youtube.com##html[dark] #contentWrapper > .ytd-popup-container.style-scope:style(background: rgba(10, 10, 10, 0.8) !important; color: #fff !important;)
