@@ -17,7 +17,7 @@ This filter list aims to clean up YouTube's cluttered interface. Inspired by com
 8. Paste the raw URL of this filter list:
    
    ```
-   https://raw.githubusercontent.com/houssemko/Ublock-Origin-filters-for-Youtube/main/Youtube-Declutter.txt
+   https://github.com/houssemko/Youtube-declutter/blob/main/Youtube-Declutter.txt
    ```
 10. Click **"Apply changes"**.
 
