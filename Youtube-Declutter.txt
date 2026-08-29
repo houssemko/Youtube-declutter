@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: YouTube Declutter
-! Last modified: Fri Aug 28 07:12:00 PM UTC 2026
+! Last modified: Sat Aug 29 09:22:33 AM UTC 2026
 ! Homepage: https://github.com/houssemko/Ublock-Origin-filters-for-Youtube
 ! Licence: MIT license 
 
@@ -70,6 +70,9 @@ youtube.com##ytd-menu-renderer yt-button-view-model:has-text("Download")
 
 ! Hide Thanks button
 youtube.com##ytd-menu-renderer yt-button-view-model:has-text("Thanks")
+
+! Hide the topic filter chip bar
+youtube.com###secondary yt-related-chip-cloud-renderer
 
 ! Remove unwanted flow renderers and dialogs
 youtube.com##.YtdTalkToRecsFlowRendererHost:has-text(What hobbies are you interested in developing?)
