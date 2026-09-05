@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: YouTube Declutter
-! Last modified: Sat Aug 29 09:22:33 AM UTC 2026
+! Last modified:Sat Sep  5 06:49:01 AM UTC 2026
 ! Homepage: https://github.com/houssemko/Ublock-Origin-filters-for-Youtube
 ! Licence: MIT license 
 
@@ -126,7 +126,7 @@ youtube.com##ytd-watch-next-secondary-results-renderer > div[id='items'] > ytd-i
 ! ---------- WATCH (PLAYER) ----------
 ! ---------- PLAYER STYLING & UI ----------
 ! YouTube player controls with better contrast and blur
-youtube.com##.ytp-fullscreen-quick-actions, .ytp-button.ytp-play-button, .ytp-time-wrapper, .ytp-volume-area, .ytp-right-controls, .ytp-button.ytp-chapter-title, .ytp-button.ytp-fullscreen-grid-expand-button:style(backdrop-filter: blur(2px) !important; background: rgba(0, 0, 0, 0.5) !important; border-radius: 18px !important;)
+youtube.com##.ytp-fullscreen-quick-actions, .ytp-button.ytp-play-button, .ytp-time-wrapper, .ytp-volume-area, .ytp-right-controls, .ytp-button.ytp-chapter-title, .ytp-button.ytp-fullscreen-grid-expand-button:style(backdrop-filter: blur(2px) !important; border-radius: 18px !important;)
 ! Set default state to hidden with smooth transition
 youtube.com##.ytp-fullscreen-quick-actions :is(button[aria-label*="like" i], button[aria-label*="dislike" i], button[aria-label*="More" i])
 youtube.com##.ytp-fullscreen-quick-actions:style(opacity: 0 !important; transition: opacity 0.2s ease-in-out !important;)
