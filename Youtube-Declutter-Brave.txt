@@ -1,0 +1,123 @@
+[Brave Shields Configuration for YouTube]
+! Title: YouTube Declutter - Brave Filters
+! Last modified: Wed Sep  9 06:49:01 AM UTC 2026
+! Homepage: https://github.com/houssemko/Youtube-declutter
+! Licence: MIT license
+! Note: Use with Brave's built-in cosmetic filters feature
+
+! ---------- HOME & GENERAL LAYOUT ----------
+! YT - Remove filter categories on home, search and playlist pages
+youtube.com###frosted-glass
+youtube.com##[page-subtype="home"] ytd-feed-filter-chip-bar-renderer
+youtube.com##yt-related-chip-cloud-renderer.ytd-watch-next-secondary-results-renderer
+youtube.com##ytd-item-section-renderer.ytd-section-list-renderer[page-subtype="playlist"] > #header > ytd-feed-filter-chip-bar-renderer
+youtube.com##ytd-rich-section-renderer:has-text("Explore more topics")
+youtube.com##ytd-browse[page-subtype="home"] #dismissible
+
+! More Video Thumbs
+youtube.com##ytd-rich-grid-renderer
+youtube.com##ytd-rich-grid-row
+youtube.com##ytd-rich-grid-row #contents
+
+! Fix gaps in video thumbnails due to removed ads
+youtube.com##ytd-rich-item-renderer
+
+! Watched video tint
+youtube.com##ytd-thumbnail:has(#progress)
+youtube.com##yt-thumbnail-view-model:has(.ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment)
+
+! ---------- PLAYLISTS & MIXES ----------
+! Hide recommended playlists/videos when viewing playlists
+youtube.com##[page-subtype="home"] ytd-item-section-renderer[is-playlist-video-container]
+youtube.com##[page-subtype="home"] ytd-shelf-renderer:has-text("Recommended")
+
+! Hide the "Mix - " and "My Mix" music playlist suggestions
+youtube.com##[page-subtype="home"] ytd-rich-item-renderer:has(a[href*="start_radio=1"])
+youtube.com##[page-subtype="home"] .lockup.ytd-item-section-renderer:has-text("Mix - ")
+youtube.com##[page-subtype="home"] .lockup.ytd-item-section-renderer:has-text("My Mix")
+
+! Hide Podcast and Video Playlist suggestions
+youtube.com##[page-subtype="home"] ytd-rich-item-renderer:has-text("View full playlist")
+youtube.com##[page-subtype="home"] ytd-item-section-renderer:has-text("View full playlist")
+
+! ---------- AI GARBAGE ----------
+! Remove the AI generated summary
+youtube.com###expandable-metadata
+
+! Remove the 'Ask' button
+youtube.com##button-view-model > button
+
+! Remove AI chat box on home page
+youtube.com##ytd-rich-section-renderer:has(yt-talk-to-recs-view-model)
+
+! ---------- UI ANNOYANCES & POPUPS ----------
+! Remove specific annoying UI elements
+youtube.com###teaser-carousel
+youtube.com###video-preview-container
+youtube.com###voice-search-button
+youtube.com##yt-thumbnail-hover-overlay-toggle-actions-view-model
+youtube.com##.ytp-autonav-toggle
+youtube.com##ytd-miniplayer
+youtube.com###country-code
+youtube.com##a.ytp-menuitem
+
+! Hide Create button
+youtube.com##ytd-masthead ytd-topbar-menu-button-renderer
+youtube.com##ytd-masthead ytd-button-renderer
+
+! Hide Remix button
+youtube.com##ytd-menu-renderer yt-button-view-model:has-text("Remix")
+
+! Hide Download button
+youtube.com##ytd-menu-renderer yt-button-view-model:has-text("Download")
+
+! Hide Thanks button
+youtube.com##ytd-menu-renderer yt-button-view-model:has-text("Thanks")
+
+! Hide the topic filter chip bar
+youtube.com###secondary yt-related-chip-cloud-renderer
+
+! Remove unwanted flow renderers and dialogs
+youtube.com##.YtdTalkToRecsFlowRendererHost
+youtube.com##tp-yt-paper-dialog.ytd-popup-container
+youtube.com##ytd-inline-survey-renderer
+youtube.com##ytd-message-renderer.ytd-live-chat-frame:has-text("Chat replay")
+
+! Block Playables on the homepage
+youtube.com##ytd-rich-section-renderer
+
+! ---------- SEARCH ----------
+! Hide search suggestions drop downs
+||suggestqueries-clients*.youtube.com/complete/search^
+
+! Make video thumbnails smaller in search results
+youtube.com##ytd-two-column-search-results-renderer ytd-thumbnail
+
+! ---------- WATCH (PLAYER) ----------
+! Remove the "Contains paid promotion" popup on sponsored videos
+youtube.com##.ytp-paid-content-overlay-link
+
+! Hide channel logo/branding in the bottom-right corner of the video
+youtube.com##.iv-branding
+
+! Remove background from time display
+youtube.com##.ytp-time-display
+
+! Remove featured product ads from in video
+youtube.com##.ytp-featured-product
+
+! Remove the "Experiencing interruptions?" popup
+youtube.com##tp-yt-paper-toast
+
+! Remove cinematic lighting
+youtube.com###cinematics
+
+! Suppress under-video information boxes
+youtube.com##ytd-shelf-renderer
+youtube.com###clarify-box
+
+! Hide the Clip button
+youtube.com###flexible-item-buttons
+
+! Recommendations sidebar
+youtube.com##ytd-tvfilm-offer-module-renderer
