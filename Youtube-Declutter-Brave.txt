@@ -15,7 +15,6 @@ youtube.com##ytd-rich-section-renderer:has-text("Explore more topics")
 youtube.com##ytd-browse[page-subtype="home"] #dismissible
 
 ! More Video Thumbs
-youtube.com##ytd-rich-grid-renderer
 youtube.com##ytd-rich-grid-row
 youtube.com##ytd-rich-grid-row #contents
 
@@ -83,8 +82,8 @@ youtube.com##tp-yt-paper-dialog.ytd-popup-container
 youtube.com##ytd-inline-survey-renderer
 youtube.com##ytd-message-renderer.ytd-live-chat-frame:has-text("Chat replay")
 
-! Block Playables on the homepage
-youtube.com##ytd-rich-section-renderer
+! Block Playables on the homepage - REFINED TO NOT BREAK RECOMMENDATIONS
+youtube.com##[page-subtype="home"] ytd-rich-section-renderer:has(ytd-rich-shelf-renderer:has-text("Playable"))
 
 ! ---------- SEARCH ----------
 ! Hide search suggestions drop downs
@@ -112,8 +111,8 @@ youtube.com##tp-yt-paper-toast
 ! Remove cinematic lighting
 youtube.com###cinematics
 
-! Suppress under-video information boxes
-youtube.com##ytd-shelf-renderer
+! Suppress under-video information boxes - SPECIFIC TO AVOID HIDING RECOMMENDATIONS
+youtube.com##ytd-shelf-renderer:has-text("Recommended for you")
 youtube.com###clarify-box
 
 ! Hide the Clip button
