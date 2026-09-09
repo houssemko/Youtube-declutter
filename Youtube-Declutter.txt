@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: YouTube Declutter
-! Last modified:Sat Sep  5 06:49:01 AM UTC 2026
+! Last modified: Wed Sep  9 06:49:01 AM UTC 2026
 ! Homepage: https://github.com/houssemko/Ublock-Origin-filters-for-Youtube
 ! Licence: MIT license 
 
@@ -76,7 +76,7 @@ youtube.com###secondary yt-related-chip-cloud-renderer
 
 ! Remove unwanted flow renderers and dialogs
 youtube.com##.YtdTalkToRecsFlowRendererHost:has-text(What hobbies are you interested in developing?)
-youtube.com##tp-yt-paper-dialog.ytd-popup-container:has-text(/following Premium|Choose all that apply|Become a member|Free trial|How are your|How interested|Live TV|Wish videos|background play|better TV|cable box|cable reimagined|hidden fees|of YouTube TV|on YouTube TV|unlimited DVR|with YouTube TV|without the ads|try this feature|Terms apply/)
+youtube.com##tp-yt-paper-dialog.ytd-popup-container:has-text(/following Premium|Choose all that apply|Become a member|Free trial|How are your|How interested|Live TV|Wish videos|background play|better [...]
 youtube.com##ytd-inline-survey-renderer
 youtube.com##ytd-message-renderer.ytd-live-chat-frame.style-scope:has-text("Chat replay")
 
@@ -126,7 +126,7 @@ youtube.com##ytd-watch-next-secondary-results-renderer > div[id='items'] > ytd-i
 ! ---------- WATCH (PLAYER) ----------
 ! ---------- PLAYER STYLING & UI ----------
 ! YouTube player controls with better contrast and blur
-youtube.com##.ytp-fullscreen-quick-actions, .ytp-button.ytp-play-button, .ytp-time-wrapper, .ytp-volume-area, .ytp-right-controls, .ytp-button.ytp-chapter-title, .ytp-button.ytp-fullscreen-grid-expand-button:style(backdrop-filter: blur(2px) !important; border-radius: 18px !important;)
+youtube.com##.ytp-fullscreen-quick-actions, .ytp-button.ytp-play-button, .ytp-time-wrapper, .ytp-volume-area, .ytp-right-controls, .ytp-button.ytp-chapter-title, .ytp-button.ytp-fullscreen-grid-expand[...]
 ! Set default state to hidden with smooth transition
 youtube.com##.ytp-fullscreen-quick-actions :is(button[aria-label*="like" i], button[aria-label*="dislike" i], button[aria-label*="More" i])
 youtube.com##.ytp-fullscreen-quick-actions:style(opacity: 0 !important; transition: opacity 0.2s ease-in-out !important;)
@@ -137,7 +137,10 @@ youtube.com##.ytp-fullscreen-quick-actions:hover:style(opacity: 1 !important;)
 ! Style popup panels with translucency
 youtube.com##html[dark] #contentWrapper > .ytd-popup-container.style-scope:style(background: rgba(10, 10, 10, 0.8) !important; color: #fff !important;)
 youtube.com##html:not([dark]) #contentWrapper > .ytd-popup-container.style-scope:style(background: rgba(255, 255, 255, 0.85) !important; color: #000 !important;)
-youtube.com###header > .ytd-multi-page-menu-renderer.style-scope
+
+! Style header to match translucent popup panels
+youtube.com##html[dark] #header > .ytd-multi-page-menu-renderer.style-scope:style(background: rgba(10, 10, 10, 0.8) !important; color: #fff !important;)
+youtube.com##html:not([dark]) #header > .ytd-multi-page-menu-renderer.style-scope:style(background: rgba(255, 255, 255, 0.85) !important; color: #000 !important;)
 
 ! Remove the "Contains paid promotion" popup on sponsored videos.
 youtube.com##.ytp-paid-content-overlay-link
@@ -167,7 +170,7 @@ youtube.com##+js(ra, enable-color-sampling, ytd-watch-metadata[enable-color-samp
 youtube.com##+js(aeld, /^mouse(enter|leave)$/, , elements, #description)
 
 ! Hide the Clip button
-youtube.com###flexible-item-buttons > yt-button-view-model.ytd-menu-renderer > .ytd-menu-renderer.style-scope.ytSpecButtonViewModelHost:has(div.yt-spec-button-shape-next__button-text-content:has-text('Clip'))
+youtube.com###flexible-item-buttons > yt-button-view-model.ytd-menu-renderer > .ytd-menu-renderer.style-scope.ytSpecButtonViewModelHost:has(div.yt-spec-button-shape-next__button-text-content:has-text([...]
 
 ! Remove "Auto-dubbed" indicator
 youtube.com##yt-lockup-view-model.lockup.ytd-item-section-renderer:has-text(Auto-dubbed)
@@ -181,4 +184,3 @@ youtube.com##+js(aeld, /^mouse(enter|leave)$/, , elements, #description)
 
 ! recommendations sidebar
 youtube.com##ytd-tvfilm-offer-module-renderer
-
