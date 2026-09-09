@@ -40,7 +40,6 @@ This filter list aims to clean up YouTube's cluttered interface. Inspired by com
    
 4. The filters will be applied automatically.
 
-> **Note:** Brave's built-in filter engine has different syntax limitations compared to uBlock Origin. Some advanced selectors may not be supported. See `Youtube-Declutter-Brave.txt` for the Brave-compatible version.
 
 ## 📦 What's Included
 
