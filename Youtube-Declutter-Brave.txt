@@ -4,6 +4,7 @@
 ! Homepage: https://github.com/houssemko/Youtube-declutter
 ! Licence: MIT license
 ! Note: Use with Brave's built-in cosmetic filters feature
+! WARNING: Removed ALL :has() selectors - Brave does not support them
 
 ! ---------- HOME & GENERAL LAYOUT ----------
 ! YT - Remove filter categories on home, search and playlist pages
@@ -17,22 +18,15 @@ youtube.com##ytd-browse[page-subtype="home"] #dismissible
 ! Fix gaps in video thumbnails due to removed ads
 youtube.com##ytd-rich-item-renderer
 
-! Watched video tint
-youtube.com##ytd-thumbnail:has(#progress)
-youtube.com##yt-thumbnail-view-model:has(.ytThumbnailOverlayProgressBarHostWatchedProgressBarSegment)
-
 ! ---------- PLAYLISTS & MIXES ----------
 ! Hide recommended playlists/videos when viewing playlists
 youtube.com##[page-subtype="home"] ytd-item-section-renderer[is-playlist-video-container]
-youtube.com##[page-subtype="home"] ytd-shelf-renderer:has-text("Recommended")
 
 ! Hide the "Mix - " and "My Mix" music playlist suggestions
-youtube.com##[page-subtype="home"] ytd-rich-item-renderer:has(a[href*="start_radio=1"])
 youtube.com##[page-subtype="home"] .lockup.ytd-item-section-renderer:has-text("Mix - ")
 youtube.com##[page-subtype="home"] .lockup.ytd-item-section-renderer:has-text("My Mix")
 
 ! Hide Podcast and Video Playlist suggestions
-youtube.com##[page-subtype="home"] ytd-rich-item-renderer:has-text("View full playlist")
 youtube.com##[page-subtype="home"] ytd-item-section-renderer:has-text("View full playlist")
 
 ! ---------- AI GARBAGE ----------
@@ -41,9 +35,6 @@ youtube.com###expandable-metadata
 
 ! Remove the 'Ask' button
 youtube.com##button-view-model > button
-
-! Remove AI chat box on home page
-youtube.com##ytd-rich-section-renderer:has(yt-talk-to-recs-view-model)
 
 ! ---------- UI ANNOYANCES & POPUPS ----------
 ! Remove specific annoying UI elements
@@ -72,8 +63,7 @@ youtube.com##ytd-menu-renderer yt-button-view-model:has-text("Thanks")
 ! Hide the topic filter chip bar
 youtube.com###secondary yt-related-chip-cloud-renderer
 
-! Remove unwanted flow renderers and dialogs
-youtube.com##.YtdTalkToRecsFlowRendererHost
+! Remove unwanted dialogs
 youtube.com##tp-yt-paper-dialog.ytd-popup-container
 youtube.com##ytd-inline-survey-renderer
 youtube.com##ytd-message-renderer.ytd-live-chat-frame:has-text("Chat replay")
