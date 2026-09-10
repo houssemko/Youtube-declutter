@@ -28,9 +28,9 @@ This filter list aims to clean up YouTube's cluttered interface. Inspired by com
 
 ### Brave Browser
 
-1. Open **Brave Settings** → **Extensions** → **Shields settings**.
+1. Open **Brave Settings** → **Shields** → **Content Filtering**.
    
-2. Scroll down to **"Additional filters"** section.
+2. Scroll down to **"Add custom filter lists"** section.
    
 3. Paste the raw URL of the Brave filter list:
    
