@@ -51,10 +51,6 @@ This filter list aims to clean up YouTube's cluttered interface. Inspired by com
 - Hides playable games and unnecessary features
 - Cleans up the watch player interface
 
-## 🗂️ Filter Files
-
-- **`Youtube-Declutter.txt`** - Full uBlock Origin filters (includes all features)
-- **`Youtube-Declutter-Brave.txt`** - Brave-compatible filters (excludes Shorts and Auto-dubbed filters due to syntax limitations)
 
 ## 🙏 Credits
 
