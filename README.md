@@ -10,7 +10,7 @@ This filter list aims to clean up YouTube's cluttered interface. Inspired by com
 
 ### uBlock Origin (Recommended)
 
-1. **Install [uBlock Origin](https://ublockorigin.com/)** (available for Chrome, Firefox, Edge, and more).
+1. **Install [uBlock Origin]([https://ublockorigin.com](https://github.com/gorhill/uBlock)/)** (available for Chrome, Firefox, Edge, and more).
    
 2. Open the uBlock Origin dashboard (click the extension icon → ⚙️ *Dashboard*).
    
